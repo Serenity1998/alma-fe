@@ -1,0 +1,21 @@
+.container {
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+.container-sm {
+    max-width: 480px;
+}
+
+.container-md {
+max-width: 670px;
+}
+
+.container-lg {
+max-width: 1200px;
+}
+
+.bg-green {
+    background-color: #D4D99B;
+}
