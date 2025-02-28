@@ -1,3 +1,5 @@
+import { PublicLeadForm } from "@/types/global";
+import { UseFormRegister } from "react-hook-form";
 import styled from "styled-components";
 
 const CheckboxContainer = styled.label`
@@ -43,17 +45,17 @@ const StyledCheckbox = styled.span`
 `;
 
 interface VisaCheckboxProps {
-    register: any;
-    value: string;
-    label: string;
+  register: UseFormRegister<PublicLeadForm>;
+  value: string;
+  label: string;
 }
 
 const VisaCheckbox: React.FC<VisaCheckboxProps> = ({ register, value, label }) => (
-    <CheckboxContainer>
-        <HiddenCheckbox type="checkbox" {...register("visas", { required: true })} value={value} />
-        <StyledCheckbox />
-        {label}
-    </CheckboxContainer>
+  <CheckboxContainer>
+    <HiddenCheckbox type="checkbox" {...register("visas", { required: true })} value={value} />
+    <StyledCheckbox />
+    {label}
+  </CheckboxContainer>
 );
 
 export default VisaCheckbox

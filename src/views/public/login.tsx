@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useLoginMutation } from '@/store/CommonApi';
 
 import styled from 'styled-components';
+import Button from '@/components/ui/Button';
 
 const Form = styled.form`
   display: flex;
@@ -51,6 +52,7 @@ const Login = () => {
                 setErrorMessage('Failed to login. Please try again.');
             }
         } catch (error) {
+            console.log(error)
             setErrorMessage('Invalid username or password');
         }
     };
@@ -72,7 +74,7 @@ const Login = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <button type="submit" disabled={isLoading}>Login</button>
+                <Button type="submit" loading={isLoading}>Login</Button>
                 {isLoading && <div>Loading...</div>}
                 <ErrorMessage>
                     {errorMessage && <div>{errorMessage}</div>}
