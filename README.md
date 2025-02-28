@@ -9,6 +9,14 @@ This is a frontend application built with Next.js
 - Easy setup with readable structure
 - Used sass, css and css-in-js for styling but I prefer using ready to use libraries like tailwind and antd for forms and tables
 
+## PAGES
+
+| Pages  | Endpoint      | Description           |
+|--------|---------------|-----------------------|
+| 1      | /             | Lead form             |
+| 2      | /dashboard    | Private Dashboard     |
+| 3      | /login        | Login for internal ui |
+
 ## Requirements
 Node.js >= 20.x
 npm or yarn
