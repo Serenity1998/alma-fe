@@ -1,19 +1,41 @@
 'use client'
 
-import { useEffect, useState } from 'react';
+import { useGetProtectedDataMutation } from '@/store/InternalApi';
+import { SubmittedForm } from '@/types/global';
+import { useEffect } from 'react';
+
+import styled from "styled-components";
+
+const Span = styled.span`
+  color: blue;
+  cursor: pointer;
+  padding-left: 20px;
+`;
 
 const Dashboard = () => {
-    const [leads, setLeads] = useState<any[]>([]);
-    const [loading, setLoading] = useState<boolean>(true);
+    const [getData, { data, isLoading }] = useGetProtectedDataMutation();
+
+    console.log(data)
+
+    useEffect(() => {
+        const fetchData = async () => {
+            await getData();
+        };
+
+        fetchData();
+    }, [getData]);
+
+    if (isLoading) return <div>Loading...</div>;
 
     return (
         <div>
-            <h1>Lead Management Dashboard</h1>
-            {loading ? <p>Loading...</p> : (
+            <h1>Leads</h1>
+            {isLoading ? <p>Loading...</p> : (
                 <ul>
-                    {leads.map((lead) => (
-                        <li key={lead.id}>
+                    {data?.responseObject?.map((lead: SubmittedForm) => (
+                        <li key={lead._id}>
                             <p>{lead.firstName} {lead.lastName} - {lead.status}</p>
+
                         </li>
                     ))}
                 </ul>

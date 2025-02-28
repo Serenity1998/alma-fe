@@ -1,9 +1,8 @@
-"use client";
+'use client'
 
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
 import styled from "styled-components";
-
 import stepOne from "@/assets/images/step-1.png";
 import stepTwo from "@/assets/images/step-2.png";
 import stepThree from "@/assets/images/step-3.png";
@@ -72,9 +71,8 @@ const Button = styled.button`
   width: 530px;
 `;
 
-
 const LeadForm: React.FC = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm<PublicLeadForm>();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<PublicLeadForm>();
     const [submissionStatus, setSubmissionStatus] = useState<"success" | "error" | "">("");
     const [postLeadForm, { isLoading, isError }] = usePostLeadFormMutation();
 
@@ -85,6 +83,11 @@ const LeadForm: React.FC = () => {
         } catch (error) {
             setSubmissionStatus("error");
         }
+    };
+
+    const handleGoBack = () => {
+        reset();  // Reset the form state when going back to home
+        setSubmissionStatus("");  // Reset submission status
     };
 
     return (
@@ -139,7 +142,7 @@ const LeadForm: React.FC = () => {
                     />
 
                     <Button type="submit">Submit</Button>
-                    {submissionStatus === "error" && <div>Something went wrong. Please try again.</div>}
+                    {submissionStatus === "error" && <ErrorMessage><br />Something went wrong. Please try again.</ErrorMessage>}
                 </Form>
             ) : (
                 <StatusMessageWrapper>
@@ -149,7 +152,7 @@ const LeadForm: React.FC = () => {
                         Your information was submitted to our team of immigration attorneys. Expect an email from hello@tryalma.ai
                     </Description>
                     <Spacer />
-                    <Button type="button">Go back to home</Button>
+                    <Button type="button" onClick={handleGoBack}>Go back to home</Button>
                 </StatusMessageWrapper>
             )}
         </div>

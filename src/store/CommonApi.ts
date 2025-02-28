@@ -7,7 +7,7 @@ export const commonApi = createApi({
   reducerPath: 'commonApi',
   baseQuery: baseQueryWithoutAuth,
   endpoints: (builder) => ({
-    login: builder.mutation<ApiResponse, LoginForm>({
+    login: builder.mutation<any, LoginForm>({
       query: (body: any) => ({
         url: API.login,
         method: 'POST',

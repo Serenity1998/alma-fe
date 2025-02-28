@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/assets/styles/globals.scss";
 import StoreProvider from "@/store/Provider";
+import ProtectedComponent from "@/components/common/ProtectedComponent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +24,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <StoreProvider>
-          {children}
+          <ProtectedComponent>
+            {children}
+          </ProtectedComponent>
         </StoreProvider>
       </body>
     </html>

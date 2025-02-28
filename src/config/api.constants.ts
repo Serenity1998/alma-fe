@@ -2,6 +2,7 @@ export const API_BASE_URL = 'https://alma-be-062e36b391b0.herokuapp.com/api/';
 
 export const API = {
   postlead: 'leads/submit-lead',
+  getleads: 'leads',
   login: 'auth/login',
 };
 

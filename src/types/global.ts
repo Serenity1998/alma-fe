@@ -36,7 +36,25 @@ export type PublicLeadForm = {
   additionalInfo?: string;
 };
 
-export type LoginForm = {
+export type SubmittedForm = {
+  _id: string;
+  firstName: string;
+  lastName: string;
   email: string;
+  linkedin: string;
+  visas: string[];
+  additionalInfo: string;
+  status: "PENDING" | "APPROVED" | "REJECTED";
+  __v: number;
+}
+
+export type Lead = {
+  _id: string;
+  status: "PENDING" | "APPROVED" | "REJECTED";
+}
+
+
+export type LoginForm = {
+  username: string;
   password: string;
 };
