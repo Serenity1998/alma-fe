@@ -30,8 +30,8 @@ export type PublicLeadForm = {
   firstName: string;
   lastName: string;
   email: string;
-  linkedInProfile: string;
-  visasOfInterest: string[];
+  linkedin: string;
+  visas: string[];
   resume: File;
   additionalInfo?: string;
 };

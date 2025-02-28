@@ -5,14 +5,11 @@ export const API = {
   login: 'auth/login',
 };
 
-export const COLORS = [
-  { color: 'red', value: '#FF3B30' },
-  { color: 'orange', value: '#FF9500' },
-  { color: 'yellow', value: '#FFCC00' },
-  { color: 'green', value: '#34C759' },
-  { color: 'blue', value: '#007AFF' },
-  { color: 'indigo', value: '#5856D6' },
-  { color: 'purple', value: '#AF52DE' },
-  { color: 'pink', value: '#FF2D55' },
-  { color: 'brown', value: '#A2845E' },
+export const VISAS = [
+  { "code": "B1", "name": "B1 busines visitor" },
+  { "code": "B2", "name": "B2 tourist visitor" },
+  { "code": "F1_OPT", "name": "OPT" },
+  { "code": "F1_CPT", "name": "CPT" },
+  { "code": "J1", "name": "J1 exchange visitor" },
+  { "code": "IDK", "name": "I dont know" }
 ];

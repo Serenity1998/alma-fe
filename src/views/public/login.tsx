@@ -4,6 +4,21 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLoginMutation } from '@/store/CommonApi';
 
+import styled from "styled-components";
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 30px;
+`;
+
+const Input = styled.input`
+  max-width: 100%;
+  width: 420px;
+`;
+
+
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -31,21 +46,21 @@ const Login = () => {
         <div>
             <h1>Login</h1>
             {errorMessage && <div>{errorMessage}</div>}
-            <form onSubmit={handleSubmit}>
-                <input
+            <Form onSubmit={handleSubmit}>
+                <Input
                     type="text"
                     placeholder="Username"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
-                <input
+                <Input
                     type="password"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <button type="submit">Login</button>
-            </form>
+            </Form>
         </div>
     );
 };
