@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Current deployed url for you to test [HERE LINK](https://nextjs.org)
+Current deployed url for you to test [HERE LINK](https://alma-fe-4ufq.vercel.app/)
 
 ## ALMA Take-home test repository
 
