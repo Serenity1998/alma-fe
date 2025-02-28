@@ -17,6 +17,7 @@
     "async-mutex": "^0.5.0",
     "jwt-decode": "^4.0.0",
     "next": "15.2.0",
+    "next-plugin-styled-components": "^1.0.1-next.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.54.2",
@@ -30,6 +31,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "babel-plugin-styled-components": "^2.1.4",
     "eslint": "^9",
     "eslint-config-next": "15.2.0",
     "typescript": "^5"
