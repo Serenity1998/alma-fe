@@ -1,8 +1,18 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## ALMA Take-home test repository
 
-First, run the development server:
+This is a frontend application built with Next.js
+
+## Features
+- Integration with API endpoints (I created small BE for this test)
+- Easy setup with readable structure
+- Used sass, css and css-in-js for styling but I prefer using ready to use libraries like tailwind and antd for forms and tables
+
+## Requirements
+Node.js >= 20.x
+npm or yarn
+Prisma CLI installed globally (optional)
 
 ```bash
 npm run dev
