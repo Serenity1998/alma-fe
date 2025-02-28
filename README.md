@@ -19,6 +19,11 @@ This is a frontend application built with Next.js
 | 2      | /dashboard    | Private Dashboard     |
 | 3      | /login        | Login for internal ui |
 
+## Login credentials
+
+Username: tume@test.com
+Password: Tume/1998
+
 ## Requirements
 Node.js >= 20.x
 npm or yarn
