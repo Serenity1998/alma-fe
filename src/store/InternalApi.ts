@@ -1,6 +1,6 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 import baseQueryWithAuth from '@/helpers/BaseQueryWithAuth';
-import { ApiResponse, LoginForm } from '@/types/global';
+import { ApiResponse } from '@/types/global';
 import { API } from '@/config/api.constants';
 
 export const internalApi = createApi({

@@ -74,7 +74,7 @@ const Button = styled.button`
 const LeadForm: React.FC = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm<PublicLeadForm>();
     const [submissionStatus, setSubmissionStatus] = useState<"success" | "error" | "">("");
-    const [postLeadForm, { isLoading, isError }] = usePostLeadFormMutation();
+    const [postLeadForm] = usePostLeadFormMutation();
 
     const onSubmit: SubmitHandler<PublicLeadForm> = async (data) => {
         try {
@@ -86,8 +86,8 @@ const LeadForm: React.FC = () => {
     };
 
     const handleGoBack = () => {
-        reset();  // Reset the form state when going back to home
-        setSubmissionStatus("");  // Reset submission status
+        reset();
+        setSubmissionStatus("");
     };
 
     return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import {jwtDecode} from 'jwt-decode';
 
 interface UserContextType {
   user?: null | undefined;

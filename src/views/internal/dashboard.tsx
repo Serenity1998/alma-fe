@@ -4,14 +4,6 @@ import { useGetProtectedDataMutation } from '@/store/InternalApi';
 import { SubmittedForm } from '@/types/global';
 import { useEffect } from 'react';
 
-import styled from "styled-components";
-
-const Span = styled.span`
-  color: blue;
-  cursor: pointer;
-  padding-left: 20px;
-`;
-
 const Dashboard = () => {
     const [getData, { data, isLoading }] = useGetProtectedDataMutation();
 
