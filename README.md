@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+Current deployed url for you to test [HERE LINK](https://nextjs.org)
+
 ## ALMA Take-home test repository
 
 This is a frontend application built with Next.js
@@ -21,6 +23,36 @@ This is a frontend application built with Next.js
 Node.js >= 20.x
 npm or yarn
 Prisma CLI installed globally (optional)
+
+## Main structures:
+Followed best practices of Next.js 14
+
+- src
+
+```sh
+/src
+  │
+  ├── public
+  │   └── next.svg         # SVG files here
+  │
+  ├── src
+  │   ├── assets           # Images, Styles, Icons
+  │   └── app
+  │       ├── internal     # Implemented middleware for securing private, internal pages
+  │       └── public       # Public pages like login, leadform exists here
+  │
+  │   ├── components       # Common components (Sidebar, Header), UI (widget like small components like button, spinner ...)
+  │   └── helpers
+  │       ├── baseQuery           # BaseQuery for api call without auth
+  │       └── baseQueryWithAuth   # BaseQuery for api call with re-auth and redirection
+  │   └── store
+  │       ├── commonApi     # CommonApi slices for public api call
+  │       └── internalApi   # InternalApi slices for authorized api call with JWT token
+  │   └── views
+  │       ├── internal     # internal views for pages
+  │       └── public       # public views for pages
+  │
+  └── README.md
 
 ```bash
 npm run dev
